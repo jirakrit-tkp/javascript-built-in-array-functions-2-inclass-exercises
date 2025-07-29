@@ -18,6 +18,22 @@ function findNLowestNumber(numbers,n) {
     return minNumber
 }
 
+// function findNLowestNumber(numbers,n) {
+//     if (n <= numbers.length) {
+//         let minNumbers = [];
+//         while (minNumbers.length < n) {
+//             min = Infinity;
+//             for (let num of numbers) {
+//                 if (!minNumbers.includes(num)) {
+//                     if (num < min) { min = num }
+//                 }
+//             }
+//             minNumbers.push(min);
+//         }
+//         return minNumbers
+//     } else {return "Error"}
+// }
+
 const arrOfNumbers1 = [10, 3, 55, 0, 18];
 let result1 = findNLowestNumber(arrOfNumbers1, 3);
 console.log(result1); // [ 0, 3, 10 ]
