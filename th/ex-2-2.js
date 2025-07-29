@@ -8,6 +8,15 @@
 */
 
 // Start coding here
+function findNLowestNumber(numbers,n) {
+    const minNumber = [];
+    for (let i = 0; i < n; i++) {
+        minNumber.push(Math.min(...numbers));
+        let findIndex = numbers.indexOf(Math.min(...numbers));
+        numbers = numbers.slice(0,findIndex).concat(numbers.slice(findIndex+1,numbers.length))
+    }
+    return minNumber
+}
 
 const arrOfNumbers1 = [10, 3, 55, 0, 18];
 let result1 = findNLowestNumber(arrOfNumbers1, 3);
